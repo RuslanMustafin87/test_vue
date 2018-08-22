@@ -32,15 +32,25 @@
     }
 }
 
+.radioButton{
+    width: 200px;
+    height: 100px;
+    background-color: #2c323c;
+    margin: auto; 
+}
+
 .radio__label{
     display: block;
     width: 20px;
     height: 20px;
-    border: 2px solid blue;
+    box-shadow: inset -1px 2px 7px 0px #000,
+                    0px .5px 2px -1px #fff;
+    // box-shadow-bottom: none;
     border-radius: 50%;
     margin: auto;
     position: relative;
     cursor: pointer;
+    background-color: #24282f;
 }
 
 .radio__input{
@@ -50,14 +60,14 @@
 .radio__label::after{
     content: '';
     display: none;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: blue;
+    background: linear-gradient(340deg, #209606, #c4edbb)
 }
 
 .radio__input:checked + .radio__label::after{

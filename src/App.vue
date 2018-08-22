@@ -1,4 +1,4 @@
-<template>
+<template lang='pug'>
   <div id="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
@@ -16,7 +16,10 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
-    <comp></comp>
+    comp(helloText='Hello Ruslan!')
+      div Слот 3
+      div(slot='exemple_1') Слот 1
+      div(slot='exemple_2') Слот 2     
   </div>
 </template>
 
