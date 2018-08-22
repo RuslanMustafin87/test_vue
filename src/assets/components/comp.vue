@@ -16,23 +16,7 @@
                     <input type='radio' class='radio__input' id='radio_2' name='radio' value='No' v-model='radio'>
                     label(class='radio__label radio__label-2' for='radio_2')
                 span {{radio}}
-                select(v-model='select')
-                    option(:value='name[0]') 1
-                    option(:value='name[1]') 2
-                    option(:value='name[2]') 3
-                span {{select}}
-                br
-                input(type='checkbox' v-model='check' value='option1')
-                input(type='checkbox' v-model='check' value='option2')
-                input(type='checkbox' v-model='check' value='option3')
-                br
-                span {{check}}
-                br
-                span {{helloText}}
-                slot(name='default')
-                slot(name='exemple_1')
-                slot(name='exemple_2')
-                //- slot(name='exemple_3')
+                
                 
 </template>
 
@@ -47,9 +31,6 @@ export default {
                 name: ['ruslan','katya','roma'],
                 check: []
             }
-        },
-        props: {
-            helloText: String
         }
 }
 </script>

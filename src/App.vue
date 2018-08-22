@@ -16,15 +16,14 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
-    comp(helloText='Hello Ruslan!')
-      div Слот 3
-      div(slot='exemple_1') Слот 1
-      div(slot='exemple_2') Слот 2     
+    comp
+    inner  
   </div>
 </template>
 
 <script>
-import comp from './assets/components/comp.vue'
+import comp from './assets/components/comp.vue';
+import inner from './assets/components/inner/inner.vue'
 export default {
   name: 'app',
   data () {
@@ -33,7 +32,8 @@ export default {
     }
   },
   components: {
-      comp
+      comp,
+      inner
   }
 }
 </script>
