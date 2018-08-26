@@ -8,13 +8,15 @@
 <script>
 import goodItem from './items/item.vue'
 export default {
+    // data: ()=>{
+    //     n: 0
+    // },
     components: {
         goodItem
     },
     methods: {
         someFunc(n){
             console.log(n)
-
         }
     }
     

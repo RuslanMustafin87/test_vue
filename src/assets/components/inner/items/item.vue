@@ -2,17 +2,18 @@
     div
         h3 Заголовок {{n}}
         h4(:id='n') Пример
-        button(@click='handleClick(n)') Кнопка
+        button(@click='handleClick(n)') Кнопка {{n}}
 </template>
 
 <script>
+import {$eventBus} from '../../../../main.js';
 export default {
     props: {
         n: Number
     },
     methods:{
         handleClick(n){
-            this.$emit('some-event', n)
+            $eventBus.$emit('some-event', n);
         }
     }
 }
