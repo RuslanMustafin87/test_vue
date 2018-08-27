@@ -1,32 +1,40 @@
 <template lang='pug'>
   <div id="app">
-    comp
-    inner 
-    span {{n}}
+    label Новое задание
+    br
+    input(type='text'  
+          v-model='newTodo'
+          @keydown.enter='addTodo')
+    br
+    ul.list
+      li.list__item(v-for='(todo,index) in todos')
+        item(:titleItem='todo' :indexItem='index')
   </div>
 </template>
 
 <script>
-import {$eventBus} from './main.js'
-import comp from './assets/components/comp.vue';
-import inner from './assets/components/inner/inner.vue';
+import item from './assets/components/item/item';
 
 export default {
   name: 'app',
   data: ()=>(
     {
-      n: 0
+      todos: [],
+      newTodo: '',
+      id: 0
     }
   ),
-  created(){
-    $eventBus.$on('some-event', x=>{
-      this.n = x;
-    })
+  methods:{
+    addTodo(){
+      this.todos.push(this.newTodo)
+    },
+    removeItem(){
+      this.todos.slice(id,1)
+    }
   },
   components: {
-      comp,
-      inner
-  }
+    item
+  },
 }
 </script>
 
@@ -50,11 +58,19 @@ ul {
 }
 
 li {
-  display: inline-block;
+  display: block;
   margin: 0 10px;
 }
 
 a {
   color: #42b983;
 }
+
+.list__item{
+  
+  display: table;
+  margin: 30px auto;
+}
+
+
 </style>
