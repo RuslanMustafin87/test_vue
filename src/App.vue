@@ -8,12 +8,13 @@
     br
     ul.list
       li.list__item(v-for='(todo,index) in todos')
-        item(:titleItem='todo' :indexItem='index')
+        router-view
+        //- item(:titleItem='todo' :indexItem='index')
   </div>
 </template>
 
 <script>
-import item from './assets/components/item/item';
+// import item from './assets/components/item/index';
 
 export default {
   name: 'app',
@@ -32,9 +33,9 @@ export default {
       this.todos.slice(id,1)
     }
   },
-  components: {
-    item
-  },
+  // components: {
+  //   item
+  // },
 }
 </script>
 
