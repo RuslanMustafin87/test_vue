@@ -1,41 +1,12 @@
 <template lang='pug'>
   <div id="app">
-    label Новое задание
-    br
-    input(type='text'  
-          v-model='newTodo'
-          @keydown.enter='addTodo')
-    br
-    ul.list
-      li.list__item(v-for='(todo,index) in todos')
-        router-view
-        //- item(:titleItem='todo' :indexItem='index')
+    router-view
   </div>
 </template>
 
 <script>
-// import item from './assets/components/item/index';
-
 export default {
   name: 'app',
-  data: ()=>(
-    {
-      todos: [],
-      newTodo: '',
-      id: 0
-    }
-  ),
-  methods:{
-    addTodo(){
-      this.todos.push(this.newTodo)
-    },
-    removeItem(){
-      this.todos.slice(id,1)
-    }
-  },
-  // components: {
-  //   item
-  // },
 }
 </script>
 

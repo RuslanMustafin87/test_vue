@@ -10,11 +10,14 @@ import Todo from './assets/components/todo/index.vue';
 
 const routes = [
   {path: '/', component: Item},
-  {path: '/view', component: Todo}  
+  { name: 'view', 
+    path: '/view/:title', 
+    component: Todo}  
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 new Vue({
