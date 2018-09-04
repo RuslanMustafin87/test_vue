@@ -13,6 +13,11 @@
 
 <script>
 export default {
+    data(){
+        return {
+            todos: [],
+        }
+    },
     props: {
         titleItem: {
             type: String,
@@ -23,8 +28,8 @@ export default {
         }
     },
     methods: {
-        removeItem(id){
-            this.$emit('remove-item', id)
+        addTodo(){
+            this.todos.push()
         }
     }
 }

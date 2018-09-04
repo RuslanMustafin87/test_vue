@@ -4,6 +4,8 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
+export const $eventBus = new Vue();
+
 import Item from './assets/components/item/index.vue';
 import Todo from './assets/components/todo/index.vue';
 

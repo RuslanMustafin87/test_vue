@@ -1,0 +1,21 @@
+.btn{
+    cursor: pointer;
+    height: 35px;
+    width: 110px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .btn__delete{
+    background-color: #ed4040;
+  }
+  .btn__change{
+    background-color: #d6e31b;
+  }
+  .btn__view{
+    background-color: #3b3ee3;
+  }
